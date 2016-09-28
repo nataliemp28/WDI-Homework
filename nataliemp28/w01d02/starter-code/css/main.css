@@ -1,0 +1,90 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-image: url(../images/bgtile.png);
+  background-repeat: repeat-x;
+
+}
+
+main {
+  width: 600px;
+  height: 350px;
+  margin: 50px auto 0;
+}
+
+footer {
+  background: blue;
+  width: 600px;
+  height: 60px;
+  margin: 0 auto;
+}
+h2 {
+    color: rgb(58, 104, 144);
+    font: 700 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#phone {
+  height: 350px;
+  width: 215px;
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../images/phones.png);
+  background-size: cover;
+}
+
+#info {
+  width: 350px;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 25px;
+}
+
+ul {
+  color: rgb(58, 104, 144);
+  font: 700 8px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-size: cover;
+  text-align: center;
+}
+li {
+    display: inline-block;
+    padding: 3px;
+}
+
+footer {
+    background-color: white;
+}
+#copywright {
+  color: lightgrey;
+}
+.wrapper {
+  background-image: url(../images/frame.png);
+  background-repeat: no-repeat;
+  padding: 10px;
+  border: 1px;
+  border-radius: 4px;
+}
+p {
+  font: 300 11px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+#instagram img {
+  width: 180px;
+}
+#left-button img {
+  width: 120px;
+  float: left;
+}
+#right-button img {
+  width: 120px;
+  padding-left: 15px;
+}
+
+- `background: url("YOUR-LINK.COM")`
+- `list-style`
+- `text-decoration`
+- `text-transform`
