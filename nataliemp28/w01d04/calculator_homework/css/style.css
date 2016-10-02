@@ -1,0 +1,29 @@
+body {
+background-color: pink;
+}
+
+h1 {
+  font-family: cursive;
+  font-size: 48px;
+  text-align: center;
+}
+#operator {
+  border: 5px solid gray;
+  height: 40px;
+  padding: 20px;
+}
+#buttonOne,#buttonTwo {
+  border: 5px solid gray;
+  height: 15px;
+  padding: 15px;
+}
+#result,#reset {
+  border-color: gray;
+  height: 70px;
+  width: 50%;
+  border: 5px solid gray;
+  padding: 5px;
+  font-size: 14px;
+  margin:15px;
+  vertical-align: top;
+}

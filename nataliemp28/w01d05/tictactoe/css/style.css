@@ -1,0 +1,58 @@
+h1 {
+  font-size: 24px;
+  margin: auto;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+.box {
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  outline: 1px solid;
+  display: inline-block;
+  float: left;
+  margin-right: -4px;
+  font-size: 100px;
+  text-align: center;
+  line-height: 150px;
+
+}
+#container {
+  position: relative;
+  width: 480px;
+  margin: auto;
+}
+.red {
+  background-color: red;
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  outline: 1px solid;
+  display: inline-block;
+  float: left;
+  margin-right: -4px;
+  font-size: 100px;
+  text-align: center;
+  line-height: 150px;
+
+}
+.yellow  {
+  background-color: yellow;
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  outline: 1px solid;
+  display: inline-block;
+  float: left;
+  margin-right: -4px;
+  font-size: 100px;
+  text-align: center;
+  line-height: 150px;
+}
+#resetButton {
+  margin: auto;
+  padding: 10px;
+  position: inline-block;
+  margin: 0 auto;
+}

@@ -8,7 +8,6 @@ form.addEventListener("submit", function(e) {
   var numberTwo = parseFloat(document.getElementById('buttonTwo').value);
   var display = document.getElementById("display");
 
-
   var result = 0;
 
   console.log(numberOne);
@@ -26,8 +25,9 @@ else if (operator === "multiplication") {
 }
 else {
   result = numberOne / numberTwo;
+
 }
-display.textContent = result;
+  display.textContent = result;
 
 });
 
