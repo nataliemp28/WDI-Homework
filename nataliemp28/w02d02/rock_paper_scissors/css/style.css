@@ -1,4 +1,76 @@
 h1 {
   text-align: center;
   font-family: "courier new", monospace;
+  font-size: 50px;
+  margin: 50px;
+  font-weight: bold;
+}
+body {
+  font-family: "courier new", monospace;
+  background-color: black;
+  color: #32CD32;
+  vertical-align: center;
+  margin: 50px;
+}
+p {
+  font-size: 20px;
+  text-align: center;
+}
+h2 {
+  font-size: 40px;
+  text-align: center;
+}
+.scoreboard {
+  font-size: 25px;
+  padding: 20px;
+  border: 1.5px solid #32CD32;
+  text-align: center;
+  margin: 0 auto;
+  width: 30%;
+}
+#humanScore {
+  font-size: 25px;
+  padding: 20px;
+  border: 3px solid #32CD32;
+  text-align: center;
+  margin: 0 auto;
+  width: 10%;
+}
+#computerScore {
+  font-size: 25px;
+  padding: 20px;
+  border: 3px solid #32CD32;
+  text-align: center;
+  margin: 0 auto;
+  width: 10%;
+}
+.buttons {
+  background-color: #32CD32;
+  border: none;
+  color: black;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "courier new", monospace;
+  font-weight: 900;
+  font-size: 24px;
+
+}
+#rock {
+  display: inline-block;
+  margin: 0 auto;
+  width: 200px;
+
+}
+#scissors {
+  display:inline-block;
+  margin: 0 auto;
+  width: 200px;
+
+}
+#paper {
+  display:inline-block;
+  margin: 0 auto;
+  width: 200px;
+
 }

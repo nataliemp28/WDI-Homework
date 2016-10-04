@@ -1,11 +1,8 @@
 var userScore = 0;
 var computerScore = 0;
-
 var updateHumanScore = document.getElementById("humanScore");
 var updateBotScore = document.getElementById("computerScore");
-
 var userChoice = "";
-
 var choices = ['rock', 'paper', 'scissors'];
 
 var choiceButtons = document.getElementsByClassName("buttons");
@@ -16,14 +13,11 @@ for (var i = 0; i < choiceButtons.length; i++) {
     var randomIndex = Math.floor(Math.random() * choices.length);
     var computerChoice = choices[randomIndex];
 
-
     userChoice = this.innerHTML.toLowerCase();
 
     console.log("User chose " + userChoice);
     console.log("Computer chose " + computerChoice);
-    //console.log(checkWinner(userChoice,computerChoice));
 
-    //function checkWinner (userChoice, computerChoice) {
     if (userChoice === computerChoice) {
       console.log("draw");
     }
@@ -39,7 +33,6 @@ for (var i = 0; i < choiceButtons.length; i++) {
       computerScore ++;
       updateBotScore.innerHTML = computerScore;
     }
-
   });
 };
 
