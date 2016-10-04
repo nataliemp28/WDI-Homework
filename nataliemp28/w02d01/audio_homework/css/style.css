@@ -1,0 +1,48 @@
+.box {
+  border: 2px solid silver;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  float: left;
+  margin: 2px;
+  text-align: center;
+  line-height: 150px;
+  padding: 5px;
+}
+#container {
+  position: relative;
+  width: 530px;
+  margin: auto;
+}
+body {
+  background-color: black;
+}
+img {
+  width: 250px;
+  margin: auto;
+  display: block;
+}
+#boxOne, #boxTwo, #boxThree, #boxFour {
+  color: red;
+  font-size; 12px;
+  font-style: italic;
+  line-height: 100px;
+}
+#boxFive, #boxSix, #boxSeven, #boxEight {
+  color: #00FF00;
+  font-size; 12px;
+  font-style: italic;
+  line-height: 100px;
+}
+#boxNine, #boxTen, #boxEleven, #boxTwelve {
+  color: #CCCC00;
+  font-size; 12px;
+  font-style: italic;
+  line-height: 100px;
+}
+#boxThirteen, #boxFourteen, #boxFifteen, #boxSixteen {
+  color: red;
+  font-size; 12px;
+  font-style: italic;
+  line-height: 100px;
+}
