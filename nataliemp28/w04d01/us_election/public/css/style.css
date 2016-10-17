@@ -7,3 +7,9 @@ main {
 .card img {
   width: 100%;
 }
+body {
+    background-color: lightgrey;
+}
+h1, h3 {
+  padding: 15px 0px;
+}
