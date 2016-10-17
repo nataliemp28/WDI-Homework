@@ -13,3 +13,9 @@ body {
 h1, h3 {
   padding: 15px 0px;
 }
+img {
+  width: 15%;
+  padding: 5px;
+  margin-bottom: 10px;
+
+}
