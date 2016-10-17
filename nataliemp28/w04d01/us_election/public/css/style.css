@@ -1,0 +1,9 @@
+main {
+  padding-top: 30px;
+}
+/*.card img main-img {
+  width: 50%;
+}*/
+.card img {
+  width: 100%;
+}
