@@ -3,10 +3,8 @@ const router = require('express').Router();
 const quotesController = require('../controllers/quotesController');
 
 
-
-router.get('/', (req, res) => res.render('index'));
-
-
+//automatically loads quotes index.ejs page when you go to homepage.
+router.get('/', (req, res) => res.redirect('/quotes'));
 
 //index of quotes
 router.route('/quotes')

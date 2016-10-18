@@ -1,8 +1,8 @@
-let quotes = require('../data/foods');
-
+let quotes = require('../data/quotes');
+console.log(quotes);
 // INDEX
 const quotesIndex = (req, res) => {
-  res.render('quotes/index', { quotes });
+  res.render('index', { quotes });
 };
 
 // NEW
@@ -34,7 +34,7 @@ const quotesEdit = (req, res) => {
 // UPDATE
 const quotesUpdate = (req, res) => {
   const id = parseInt(req.params.id);
-  let quote = req.body.food;
+  let quote = req.body.quote;
   quote.id  = id;
   quotes[id] = quote;
   res.redirect(302, `/quotes/${id}`);
