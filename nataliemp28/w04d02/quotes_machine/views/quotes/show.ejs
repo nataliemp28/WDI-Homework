@@ -1,10 +1,7 @@
-<h1>quote: <%= quote.name %></h1>
+<h1>Quote <%= quote.details %></h1>
 <p><strong>author:</strong> <%= quote.author %></p>
 <a class="btn" href="/quotes/<%= quote.id %>/edit">Edit</a>
 <form method="post" action="/quotes/<%= quote.id %>">
   <input type="hidden" name="_method" value="delete">
   <input class="btn" type="submit" value="Delete">
 </form>
-
-
-    

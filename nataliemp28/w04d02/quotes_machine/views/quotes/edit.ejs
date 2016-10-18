@@ -2,8 +2,8 @@
 <form action="/quotes/<%= quote.id %>" method="post">
   <input type="hidden" name="_method" value="put">
 
-  <label for="quote_name">Quote</label>
-  <input type="text" name="quote[quote]" id="quote_quote" class="form-control" value="<%= quote.quote %>">
+  <label for="quote_details">Quote</label>
+  <input type="text" name="quote[details]" id="quote_details" class="form-control" value="<%= quote.details %>">
 </div>
 <div class="form-group">
   <label for="quote_author">author</label>
