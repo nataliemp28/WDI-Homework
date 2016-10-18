@@ -2,7 +2,7 @@ let quotes = require('../data/quotes');
 console.log(quotes);
 // INDEX
 const quotesIndex = (req, res) => {
-  res.render('index', { quotes });
+  res.render('quotes/index', { quotes });
 };
 
 // NEW
@@ -21,7 +21,7 @@ const quotesCreate = (req, res) => {
 // SHOW
 const quotesShow = (req, res) => {
   const id = parseInt(req.params.id);
-  const quotes = quotes[id];
+  const quote = quotes[id];
   res.render("quotes/show", { quote });
 };
 

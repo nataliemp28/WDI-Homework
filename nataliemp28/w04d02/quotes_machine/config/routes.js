@@ -4,7 +4,9 @@ const quotesController = require('../controllers/quotesController');
 
 
 //automatically loads quotes index.ejs page when you go to homepage.
-router.get('/', (req, res) => res.redirect('/quotes'));
+router.get('/', (req, res) => {
+  res.redirect(302,'/quotes');
+});
 
 //index of quotes
 router.route('/quotes')
