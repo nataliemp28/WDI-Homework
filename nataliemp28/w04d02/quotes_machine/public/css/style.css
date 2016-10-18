@@ -1,5 +1,5 @@
 main {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 div.buttons {
@@ -8,4 +8,7 @@ div.buttons {
 
 form.delete {
   display: inline;
+}
+h1 {
+  padding: 15px 0px;
 }

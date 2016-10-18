@@ -2,15 +2,13 @@
 <form action="/quotes/<%= quote.id %>" method="post">
   <input type="hidden" name="_method" value="put">
 
-<div class="form-group">
-  <label for="quote_name">Name</label>
-  <input type="quote" name="quote[name]" id="quote_name" class="form-control" value="<%= quote.name %>">
+  <label for="quote_name">Quote</label>
+  <input type="text" name="quote[quote]" id="quote_quote" class="form-control" value="<%= quote.quote %>">
 </div>
 <div class="form-group">
   <label for="quote_author">author</label>
-  <input type="quote" name="quote[author]" id="quote_author" class="form-control" value="<%= quote.author %>">
+  <input type="text" name="quote[author]" id="quote_author" class="form-control" value="<%= quote.author %>">
 </div>
 
-
-  <button class="btn btn-primary">Update</button>
+  <button class="btn btn-primary" type="submit" value="Update">Update</button>
 </form>

@@ -1,15 +1,11 @@
 <main>
-  <h1>Quotes</h1>
-
-  <p>
-    Inspirational quotes from various famous people.
-  </p>
+  <h1>Inspirational (and amusing) quotes from various famous (and not so famous!) people.</h1>
 
   <% for(var i=0; i<quotes.length; i++) { %>
 
     <div>
-    <h2><strong>Quote:</strong> <%= quotes[i].content %></h2>
-    <p><strong>Author:</strong> <%= quotes[i].author %></p>
+    <h4><strong>Quote</strong> <%= quotes[i].quote %></h4>
+    <h4><strong>Author</strong> <%= quotes[i].author %></h4>
     <a class="btn" href="/quotes/<%= quotes[i].id %>/edit">Edit</a>
     <form method="post" action="/quotes/<%= quotes[i].id %>">
     <input type="hidden" name="_method" value="delete">
