@@ -1,48 +1,29 @@
+const express = require('express');
 const router = require('express').Router();
+const quotesController = require('../controllers/quotesController');
+
+
 
 router.get('/', (req, res) => res.render('index'));
 
 
 
 //index of quotes
-router.get('/quotes', (req, res) => res.render('quotes/index', { quotes }));
+router.route('/quotes')
+.get(quotesController.index)
+.post(quotesController.create);
 
-//create a new quote
-router.get('/quotes/new', (req, res) => res.render('quotes/new'));
+//new quote
+router.route('/quotes/new')
+.get(quotesController.new);
 
-//show - display a quotes
-router.get('/quotes/:id', (req, res) => {
-  console.log(req.params.id);
+//show/update/delete
+router.route('/quotes/:id')
+.get(quotesController.show)
+.put(quotesController.update)
+.delete(quotesController.delete);
 
-let quote = quotes.filter((quote) => {
-  return quote.id == req.params.id;
-})[0];
-
-console.log(quote);
-
-res.render('quotes/show', { quote });
-});
-
-
-//create
-router.post('quotes', (req, res) => {
-  let quote = req.body.quote;
-  quote.id = id;
-  quotes.push(quote);
-  id ++;
-  res.redirect(301, '/quotes');
-});
-
-//edit
-router.get('/quotes/:id/edit', (req, res) => {
-  let quote = quotes.filter((quote) => {
-    return quote.id == req.params.id;
-  })[0];
-  res.render('quotes/edit', { quote });
-});
-
-
-
-
+router.route('/quotes/:id/edit')
+.get(quotesController.edit);
 
 module.exports = router;
