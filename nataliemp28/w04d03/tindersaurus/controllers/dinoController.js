@@ -1,9 +1,9 @@
 const Dino = require('../models/dino');
 
 function dinosIndex(req, res){
-  Dino.find({}, (err, dinos) => {
+  Dino.find({}, (err, dino) => {
     if (err) return res.status(500).send('500: Server Error');
-    res.render('dinos/index', { dino });
+    res.render('dinos/index', { dinos });
   });
 }
 
@@ -11,7 +11,7 @@ function dinosNew(req, res){
   res.render('dinos/new');
 }
 
-//create new quote
+//create new dino
 function dinosCreate(req, res) {
   Dino.create(req.body.dino, (err, dino) => {
     if (err) return res.status(500).send('500: Server Error');
@@ -19,11 +19,11 @@ function dinosCreate(req, res) {
   });
 }
 
-//show a quote (find by ID)
+//show a dino (find by ID)
 function dinosShow(req, res) {
   Dino.findById(req.params.id, (err, dino) => {
     if (err) return res.status(500).send('500: Server Error');
-    res.render('dinos/show', { quote });
+    res.render('dinos/show', { dino });
   });
 }
 
@@ -38,7 +38,7 @@ function dinosEdit(req, res) {
 function dinosUpdate(req, res) {
   Dino.findByIdAndUpdate(req.params.id, req.body.dino, (err, dino) => {
     if (err) return res.status(500).send('500: Server Error');
-    res.redirect(301, `/dino/${dino.id}`);
+    res.redirect(301, `/dinos/${dino.id}`);
   });
 }
 //delete

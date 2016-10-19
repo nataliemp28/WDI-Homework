@@ -1,10 +1,15 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const app = express();
-const port = process.env.PORT || 8000; //this is to make it deployable on heroku.
+const router = require('./config/routes');
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
+
+mongoose.connect("mongodb://localhost/tindersaurus");
+
+const app = express();
+const port = process.env.PORT || 8000; //this is to make it deployable on heroku.
 
 app.set("view engine", "ejs");
 app.set("views", `${__dirname}/views`);
@@ -16,12 +21,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressLayouts);
 
-
-mongoose.connect("mongodb://localhost/quotes-app");
-
 app.get('/', (req, res) => res.render('index'));
-
-const router = require('./config/routes');
 
 app.use('/', router);
 

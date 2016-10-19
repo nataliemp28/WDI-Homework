@@ -1,0 +1,11 @@
+<h1>Dinosaurs</h1>
+
+<% dino.forEach((dino) => { %>
+  <h2><a href="/dinos/<%= dino.id %>"><%= dino.description %></a></h2>
+  <h3><a href="/dinos/<%= dino.id %>"><%= dino.name %></a></h3>
+  <h3><a href="/dinos/<%= dino.id %>"><%= dino.age %></a></h3>
+  <h3><a href="/dinos/<%= dino.id %>"><%= dino.species %></a></h3>
+  <h3><a href="/dinos/<%= dino.id %>"><%= dino.image %></a></h3>
+  <h3><a href="/dinos/<%= dino.id %>"><%= dino.single %></a></h3>
+  <h3><a href="/dinos/<%= dino.id %>"><%= dino.likes %></a></h3>
+  <% }) %>

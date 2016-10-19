@@ -3,31 +3,24 @@ const router = express.Router();
 const dinoController = require('../controllers/dinoController');
 
 
+// HOMEPAGE
+router.get('/', (req, res) => res.render('index'));
 
-
+// INDEX & CREATE
 router.route('/dinos')
   .get(dinoController.index)
   .post(dinoController.create);
 
+// NEW
+router.get('/dinos/new', dinoController.new);
 
+// SHOW & UPDATE
+router.route('/dinos/:id')
+  .get(dinoController.show)
+  .put(dinoController.update)
+  .delete(dinoController.delete);
 
-
-// HOMEPAGE, in views: index.
-router.get('/', (req, res) => res.render('index'));
-
-router.get('/dinos', (req, res) => {
-    Dino.find({}, (err, dino) => {
-        if(err) return res.status(500).send("500: Server Error");
-        res.render('./dinos/index', { dino });
-    });
-});
-
-router.get('/dinos/new', (req, res) => res.render('./dinos/new'));
-router.post('/dinos', (req, res) => {
-    Dino.create(req.body.dino, (err, dino) => {
-        if(err) return res.status(500).send("500: Server Error");
-        res.redirect(301, '/dinos');
-    });
-});
+// EDIT
+router.get('/dinos/:id/edit', dinoController.edit);
 
 module.exports = router;

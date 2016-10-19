@@ -1,0 +1,17 @@
+<h1>Show Dinosaur</h1>
+
+<h2><%= dino.description %></h2>
+<h2><%= dino.name %></h2>
+<h2><%= dino.age %></h2>
+<h2><%= dino.species %></h2>
+<h2><%= dino.image %></h2>
+<h2><%= dino.single %></h2>
+<h2><%= dino.likes %></h2>
+
+
+<a href="/dinos/<%= dino.id %>/edit">Edit</a>
+
+<form action="/dinos/<%= dino.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete</button>
+</form>
