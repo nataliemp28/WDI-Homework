@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>SPA Homework!</title>
-    <script src="/js/dist/client.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <h1>This is where the magic happens</h1>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- set viewport to device width to allow responsiveness -->
+  <link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/dist/client.js"></script>
+  <title>SPA Homework!</title>
+
+</head>
+<body>
+  <h1>Antipodean Wines</h1>
+
+  <form id="new-wine">
+    <input type="text" name='variety' id="wine-variety" placeholder="Wine Variety">
+    <input type="text" name="origin" id="wine-origin" placeholder="Origin (region, country)">
+    <input type="text" name="vineyard" id="wine-vineyard" placeholder="Vineyard">
+    <input type="text" name="year" id="wine-year" placeholder="Year">
+    <input type="text" name="image" id="wine-image" placeholder="Image Link">
+    <input type="submit" value='Add Wine'>
+  </form>
+
+</body>
+<ul id="wines">
+<!-- <button type="button" name="delete" id="remove">Delete Wine</button> -->
+</ul>
 </html>

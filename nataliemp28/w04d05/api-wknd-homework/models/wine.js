@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const wineSchema = mongoose.Schema({
-  image: { type: String },
+  image: String,
   origin: { type: String, required: true },
   vineyard: { type: String, required: true },
   variety: { type: String, required: true },
