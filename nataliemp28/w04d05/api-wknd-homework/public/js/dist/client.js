@@ -1,5 +1,7 @@
 "use strict";
 
+//this is the front end javascript that will create what is shown on the page "client" side view
+
 console.log("JS loaded!");
 
 $(init);
@@ -26,11 +28,6 @@ var addWine = function addWine(wine) {
   $('#wines').prepend("<li><img src=\"" + wine.image + "\" alt=\"ooops!\" />" + wine.variety + " - <em>" + wine.origin + "</em> - <em>" + wine.year + "</em> - <em>" + wine.vineyard + "</em></li>");
 };
 
-// json.data.forEach((wine,i) => {
-//   $container.append(`<img src="${wine.image.fixed_height.url}">`);
-// });
-
-
 var createWine = function createWine(e) {
   e.preventDefault();
   $.ajax({
@@ -41,17 +38,9 @@ var createWine = function createWine(e) {
     addWine(data);
   });
 };
-//
-// const deleteWine = (wine) => {
-//     $("#remove").on("click", removeWine);
-// };
-// const removeWine = (e) => {
-//   e.preventDefault();
-//   $.ajax({
-//     method: 'DELETE',
-//     url: "http://localhost:8000/wines",
-//     data: $('form').serialize()
-//   }).done((data) => {
-//     deleteWine(data);
-//   });
-// };
+
+$.ajax({
+  url: "http://localhost:8000/wines",
+  method: "DELETE"
+
+});

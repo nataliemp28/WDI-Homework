@@ -1,4 +1,8 @@
+//requires the wine schema object from wine.js
 const Wine = require('../models/wine');
+
+//set up all the functions to achieve RESTful routing.
+
 
 //basic index controller
 function winesIndex(req, res) {
@@ -31,6 +35,7 @@ function winesDelete(req, res) {
     res.status(204).send();
   });
 }
+//export the functions to be used elsewhere(in routes.js)
 module.exports = {
   index: winesIndex,
   create: winesCreate,

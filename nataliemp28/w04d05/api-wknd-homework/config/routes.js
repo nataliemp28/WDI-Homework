@@ -1,3 +1,6 @@
+//require the router and controller to perform get, post delete and put requests.
+//must export the router
+
 const router = require('express').Router();
 const winesController = require('../controllers/winesController');
 

@@ -9,23 +9,23 @@
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/dist/client.js"></script>
-  <title>SPA Homework!</title>
+  <title>Antipodean Wine extravaganza!</title>
 
 </head>
 <body>
   <h1>Antipodean Wines</h1>
 
   <form id="new-wine">
-    <input type="text" name='variety' id="wine-variety" placeholder="Wine Variety">
-    <input type="text" name="origin" id="wine-origin" placeholder="Origin (region, country)">
-    <input type="text" name="vineyard" id="wine-vineyard" placeholder="Vineyard">
-    <input type="text" name="year" id="wine-year" placeholder="Year">
-    <input type="text" name="image" id="wine-image" placeholder="Image Link">
-    <input type="submit" value='Add Wine'>
+    <input type="text" name='variety' class="add" placeholder="Wine Variety">
+    <input type="text" name="origin" class="add" placeholder="Origin (region, country)">
+    <input type="text" name="vineyard" class="add" placeholder="Vineyard">
+    <input type="text" name="year" class="add" placeholder="Year">
+    <input type="text" name="image" class="add" placeholder="Image Link">
+    <input type="submit" value='Add Wine' class="add">
+    <button type="button" name="delete" id="remove">Delete Wine</button>
   </form>
-
 </body>
-<ul id="wines">
-<!-- <button type="button" name="delete" id="remove">Delete Wine</button> -->
-</ul>
+
+<ul id="wines"></ul>
+
 </html>

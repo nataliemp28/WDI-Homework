@@ -1,3 +1,5 @@
+//this is the front end javascript that will create what is shown on the page "client" side view
+
 console.log("JS loaded!");
 
 $(init);
@@ -25,10 +27,6 @@ const addWine = (wine) => {
   $('#wines').prepend(`<li><img src="${wine.image}" alt="ooops!" />${wine.variety} - <em>${wine.origin}</em> - <em>${wine.year}</em> - <em>${wine.vineyard}</em></li>`);
 };
 
-// json.data.forEach((wine,i) => {
-//   $container.append(`<img src="${wine.image.fixed_height.url}">`);
-// });
-
 
 const createWine = (e) => {
   e.preventDefault();
@@ -40,17 +38,11 @@ const createWine = (e) => {
     addWine(data);
   });
 };
-//
-// const deleteWine = (wine) => {
-//     $("#remove").on("click", removeWine);
-// };
-// const removeWine = (e) => {
-//   e.preventDefault();
-//   $.ajax({
-//     method: 'DELETE',
-//     url: "http://localhost:8000/wines",
-//     data: $('form').serialize()
-//   }).done((data) => {
-//     deleteWine(data);
-//   });
-// };
+
+$('body').on('click', 'button', function() {
+  // Do the 'delete' AJAX call here
+  $.ajax({
+    method: "DELETE",
+    url: "http://localhost:8000/wines/580ba17427287829ca2a197d",
+  });
+});
