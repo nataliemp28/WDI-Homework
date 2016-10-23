@@ -6,7 +6,19 @@ $(init);
 
 function init() {
   getWines();
+
   $("form").on("submit", createWine);
+  $('body').on('click', 'button', function(event) {
+
+    var id = $(event.target).data('id');
+
+    $('#wines').remove(wine.id);
+
+    $.ajax({
+      method: "DELETE",
+      url: "http://localhost:8000/wines",
+    });
+  });
 }
 
 function getWines() {
@@ -24,9 +36,8 @@ function getWines() {
 }
 
 const addWine = (wine) => {
-  $('#wines').prepend(`<li><img src="${wine.image}" alt="ooops!" />${wine.variety} - <em>${wine.origin}</em> - <em>${wine.year}</em> - <em>${wine.vineyard}</em></li>`);
+  $('#wines').prepend(`<li><img src="${wine.image}" alt="ooops!" />${wine.variety} - <em>${wine.origin}</em> - <em>${wine.year}</em> - <em>${wine.vineyard}</em><button data-id=${wine.id}>Delete Wine</button></li>`);
 };
-
 
 const createWine = (e) => {
   e.preventDefault();
@@ -38,11 +49,3 @@ const createWine = (e) => {
     addWine(data);
   });
 };
-
-$('body').on('click', 'button', function() {
-  // Do the 'delete' AJAX call here
-  $.ajax({
-    method: "DELETE",
-    url: "http://localhost:8000/wines/580ba17427287829ca2a197d",
-  });
-});

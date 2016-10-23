@@ -30,3 +30,7 @@ ul {
   font-family: "Verdana" sans-serif;
   text-align: center;
 }
+button {
+  padding: 5px;
+  margin-left: 10px;
+}

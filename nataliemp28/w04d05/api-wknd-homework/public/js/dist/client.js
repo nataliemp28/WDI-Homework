@@ -9,6 +9,15 @@ $(init);
 function init() {
   getWines();
   $("form").on("submit", createWine);
+
+  $('body').on('click', 'button', function () {
+    // Do the 'delete' AJAX call here
+    var id = $(event.target).data('id');
+    $.ajax({
+      method: "DELETE",
+      url: "http://localhost:8000/wines/580ba17427287829ca2a197d"
+    });
+  });
 }
 
 function getWines() {
@@ -25,7 +34,7 @@ function getWines() {
 }
 
 var addWine = function addWine(wine) {
-  $('#wines').prepend("<li><img src=\"" + wine.image + "\" alt=\"ooops!\" />" + wine.variety + " - <em>" + wine.origin + "</em> - <em>" + wine.year + "</em> - <em>" + wine.vineyard + "</em></li>");
+  $('#wines').prepend("<li><img src=\"" + wine.image + "\" alt=\"ooops!\" />" + wine.variety + " - <em>" + wine.origin + "</em> - <em>" + wine.year + "</em> - <em>" + wine.vineyard + "</em><button>Delete</button></li>");
 };
 
 var createWine = function createWine(e) {
@@ -38,9 +47,3 @@ var createWine = function createWine(e) {
     addWine(data);
   });
 };
-
-$.ajax({
-  url: "http://localhost:8000/wines",
-  method: "DELETE"
-
-});
