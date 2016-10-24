@@ -17,10 +17,10 @@ header {
   font-family: Georgia;
   background-color: #a7cdf2;
   font-weight: bold;
-  padding: 15px;
+  padding: 10px;
 }
 h1 {
-  font-size: 48px;
+  font-size: 36px;
   text-shadow:
 }
 h4 {
@@ -29,4 +29,8 @@ h4 {
   font-weight: bold;
   padding-bottom: 5px;
   padding-top: 5px;
+}
+#heading {
+  color: 	#f18d00;
+  font-size: 48px;
 }
