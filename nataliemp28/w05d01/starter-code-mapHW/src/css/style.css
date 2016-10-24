@@ -1,1 +1,32 @@
 /* You will need to add a width/height for the Google map here! */
+html, body {
+  height: 90%;
+  margin: 0;
+}
+#map-canvas {
+  width: 100vw;
+  height: 90vh;
+  margin: 0 auto;
+}
+img {
+  height: 200px;
+}
+header {
+  font-size: 28px;
+  text-align: center;
+  font-family: Georgia;
+  background-color: #a7cdf2;
+  font-weight: bold;
+  padding: 15px;
+}
+h1 {
+  font-size: 48px;
+  text-shadow:
+}
+h4 {
+  font-size: 20px;
+  font-family: Georgia;
+  font-weight: bold;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
