@@ -26,11 +26,11 @@ function Router($stateProvider, $urlRouterProvider) {
           templateUrl: '/templates/dogsEdit.html',
           controller: 'DogsEditController as dogsEdit'
         })
-        .state('dogsUpdate', {
-          url: '/dogs/:id',
-          templateUrl: '/templates/dogsUpdate.html',
-          controller: 'DogsUpdateController as dogsUpdate'
-        });
+        // .state('dogsUpdate', {
+        //   url: '/dogs/:id',
+        //   templateUrl: '/templates/dogsUpdate.html',
+        //   controller: 'DogsUpdateController as dogsUpdate'
+        // });
 
     $urlRouterProvider.otherwise('/dogs');
 }
