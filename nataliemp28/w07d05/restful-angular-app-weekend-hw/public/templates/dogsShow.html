@@ -1,0 +1,8 @@
+<section>
+  <img ng-src="{{ dogsShow.dog.photo }}">
+  <h2>{{ dogsShow.dog.name }}</h2>
+  <h4>{{ dogsShow.dog.breed }}</h4>
+  <p>{{ dogsShow.dog.nature }}</p>
+  <a ui-sref="dogsEdit({id: dogsShow.dog._id})">Edit Dog</a>
+  <button ng-click="dogsShow.delete()">Delete</button>
+</section>
