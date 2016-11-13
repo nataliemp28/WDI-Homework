@@ -1,8 +1,8 @@
 <section>
   <img ng-src="{{ dogsShow.dog.photo }}" class="image">
   <h2>{{ dogsShow.dog.name }}</h2>
-  <h4>Breed: {{ dogsShow.dog.breed }}</h4>
-  <p>Characteristics: {{ dogsShow.dog.nature }}</p>
-  <button class="button-primary">Edit Dog<a ui-sref="dogsEdit({id: dogsShow.dog._id})"></a></button>
+  <h5>Breed: {{ dogsShow.dog.breed }}</h5>
+  <p>Nature: {{ dogsShow.dog.nature }}</p>
+  <button class="button-primary"><a ui-sref="dogsEdit({id: dogsShow.dog._id})">Edit Dog</a></button>
   <button class="button-primary" ng-click="dogsShow.delete()">Delete</button>
 </section>

@@ -1,12 +1,12 @@
 <section>
-  <ul class="row">
-    <li ng-repeat="dog in dogsIndex.all" class="four columns">
-      <a ui-sref="dogsShow({ id: dog._id })" class="image">
-        <img ng-src="{{ dog.photo }}" class="u-max-full-width">
-        <h2>{{ dog.name }}</h2>
-        <h4>Breed: {{ dog.breed }}</h4>
-        <p>Characteristics: {{ dog.nature }}</p>
-      </a>
-    </li>
-  </ul>
+        <ul>
+          <li ng-repeat="dog in dogsIndex.all" class="three columns">
+            <a ui-sref="dogsShow({ id: dog._id })" class="image">
+              <img ng-src="{{ dog.photo }}" class="u-max-full-width">
+              <h2>{{ dog.name }}</h2>
+              <h5>Breed: {{ dog.breed }}</h5>
+              <p>Nature: {{ dog.nature }}</p>
+            </a>
+          </li>
+        </ul>
 </section>

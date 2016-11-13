@@ -1,7 +1,6 @@
 ul li {
   list-style-type: none;
   text-align: center;
-  font-size: 24px;
 }
 a {
   text-decoration: none;
@@ -19,10 +18,20 @@ h1 {
   font-size: 70px;
   text-align: center;
 }
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+h5 {
+  font-size: 18px;
+}
 img {
     width: 300px;
     height: auto;
-    background-size: cover;
     border: 1px white solid;
     text-align: center;
+}
+.heading {
+  font-size: 30px;
+  color: black;
 }

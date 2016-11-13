@@ -6,9 +6,7 @@ module.exports = {
   delete: dogsDelete
 };
 
-
 const Dog = require('../models/dog');
-
 
 //INDEX /////////////////
 function dogsIndex(req, res) {

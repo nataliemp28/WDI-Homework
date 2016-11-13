@@ -25,12 +25,7 @@ function Router($stateProvider, $urlRouterProvider) {
           url: '/dogs/:id/edit/',
           templateUrl: '/templates/dogsEdit.html',
           controller: 'DogsEditController as dogsEdit'
-        })
-        // .state('dogsUpdate', {
-        //   url: '/dogs/:id',
-        //   templateUrl: '/templates/dogsUpdate.html',
-        //   controller: 'DogsUpdateController as dogsUpdate'
-        // });
+        });
 
     $urlRouterProvider.otherwise('/dogs');
 }
