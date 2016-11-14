@@ -8,17 +8,29 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/satellizer/0.15.5/satellizer.min.js"></script>
   <script src="/js/app.js" charset="utf-8"></script>
   <script src="/js/controllers/dogs.js" charset="utf-8"></script>
+  <script src="/js/controllers/auth.js" charset="utf-8"></script>
+  <script src="/js/controllers/main.js" charset="utf-8"></script>
   <script src="/js/models/dog.js" charset="utf-8"></script>
 </head>
-<body>
+<body ng-controller="MainController as main">
   <header class="container">
     <h1>The Dog Pound</h1>
     <nav>
     <ul>
         <li><a ui-sref="dogsIndex" class="heading" ui-sref-active="active">View all dogs</a></li>
-        <li><a ui-sref="dogsNew" class="heading" ui-sref-active="active">Add a new dog</a></li>
+
+        <li ng-if="main.isLoggedIn()"><a ui-sref="dogsNew" ui-sref-active="active"  class="heading">Add a new dog</a></li>
+
+        <li ng-if="!main.isLoggedIn()"><a ui-sref="register" class="heading" ui-sref-active="active">Register</a></li>
+
+        <li ng-if="!main.isLoggedIn()"><a ui-sref="login" class="heading" ui-sref-active="active">Login</a></li>
+
+        <li ng-if="main.isLoggedIn()"><a ng-click="main.logout()" class="heading">Logout</a></li>
+
+        <p ng-if="main.message">{{ main.message }}</p>
 
     </ul>
 </nav>

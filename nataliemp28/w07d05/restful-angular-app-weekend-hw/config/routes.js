@@ -1,17 +1,24 @@
 const router = require('express').Router();
 const express = require('express');
+const authController = require('../controllers/auth');
+const secureRoute = require('../lib/secureRoute');
+const oauthController = require('../controllers/oauth');
 // Add user routes or other resource routes here
 
-const dogs = require('../controllers/dogs');
+const dogsController = require('../controllers/dogs');
 
+router
+  .post('/register', authController.register)
+  .post('/login', authController.login)
+  .post('/auth/facebook', oauthController.facebook);
 
 router.route('/dogs')
-  .get(dogs.index)
-  .post(dogs.create);
+  .get(dogsController.index)
+  .post(secureRoute, dogsController.create);
 router.route('/dogs/:id')
-  .get(dogs.show)
-  .put(dogs.update)
-  .patch(dogs.update)
-  .delete(dogs.delete);
+  .get(dogsController.show)
+  .put(secureRoute, dogsController.update)
+  .patch(dogsController.update)
+  .delete(secureRoute, dogsController.delete);
 
 module.exports = router;

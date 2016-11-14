@@ -3,6 +3,6 @@
   <h2>{{ dogsShow.dog.name }}</h2>
   <h5>Breed: {{ dogsShow.dog.breed }}</h5>
   <p>Nature: {{ dogsShow.dog.nature }}</p>
-  <button class="button-primary"><a ui-sref="dogsEdit({id: dogsShow.dog._id})">Edit Dog</a></button>
-  <button class="button-primary" ng-click="dogsShow.delete()">Delete</button>
+  <button ng-if="main.isLoggedIn()" class="button-primary"><a ui-sref="dogsEdit({id: dogsShow.dog._id})">Edit Dog</a></button>
+  <button ng-if="main.isLoggedIn()" class="button-primary" ng-click="dogsShow.delete()">Delete</button>
 </section>
