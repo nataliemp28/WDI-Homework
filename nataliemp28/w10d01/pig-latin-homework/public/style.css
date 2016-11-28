@@ -1,0 +1,29 @@
+body  {
+  background-color: pink;
+}
+h1 {
+  font-size: 48px;
+  text-align: center;
+  padding: 20px;
+}
+form {
+  font-size: 36px;
+  font-family: Helvetica sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+button {
+  padding: 10px;
+  background-color: purple;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 25px;
+}
+input {
+  margin-top: 25px;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+}
