@@ -1,0 +1,35 @@
+// Place all the styles related to the locations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #E0FFFF;
+  text-align: center;
+}
+nav {
+  ul {
+      list-style-type: none;
+      margin: auto;
+      padding: 0;
+      overflow: hidden;
+      background-color: #FFB6C1;
+      font-size: 16px;
+  }
+
+  li {
+      float: left;
+      border-right: 1px solid #bbb;
+  }
+
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+      background-color: #111;
+  }
+}

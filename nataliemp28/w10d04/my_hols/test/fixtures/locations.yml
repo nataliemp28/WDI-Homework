@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city_country: MyString
+  approx_cost: 1.5
+  best_time_to_visit: MyString
+  sun_venue: false
+  image: MyString
+
+two:
+  city_country: MyString
+  approx_cost: 1.5
+  best_time_to_visit: MyString
+  sun_venue: false
+  image: MyString

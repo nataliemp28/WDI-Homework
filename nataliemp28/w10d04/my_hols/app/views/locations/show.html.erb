@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City country:</strong>
+  <%= @location.city_country %>
+</p>
+
+<p>
+  <strong>Approx cost:</strong>
+  <%= @location.approx_cost %>
+</p>
+
+<p>
+  <strong>Best time to visit:</strong>
+  <%= @location.best_time_to_visit %>
+</p>
+
+<p>
+  <strong>Sun venue:</strong>
+  <%= @location.sun_venue %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @location.image, width: 100 %>
+</p>
+
+<% if logged_in? %>
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<% end %> |
+<%= link_to 'Back', locations_path %>
