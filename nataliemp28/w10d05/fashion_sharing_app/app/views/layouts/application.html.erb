@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FashionSharingApp</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body class="<%= controller.action_name %>">
+  <header>
+
+    <nav class="navbar navbar-light bg-faded">
+      <span class="navbar-text float-xs-right text-muted">
+
+         <ul class="nav navbar-nav">
+          <li class="nav-item"><%= link_to "Home", landing_path %></li>
+          <% if logged_in? %>
+          <li>Hello, <%= current_user.username %></li>
+          <li class="nav-item"><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+          <li class="nav-item"><%= link_to "Products", products_path %></li>
+          <li class="nav-item"><%= link_to "Retailers", retailers_path %></li>
+
+
+          <% else %>
+          <li class="nav-item"><%= link_to "Register", register_path %></li>
+          <li class="nav-item"><%= link_to "Login", login_path %></li>
+
+          <% end %>
+        </ul>
+
+      </span>
+
+    </nav>
+  </header>
+  <% flash.each do |name, message| %>
+  <div class="flash-message flash-message-<%= name %>">
+    <%= message %>
+  </div>
+  <% end %>
+  <main class="container">
+    <%= yield %>
+  </main>
+</body>
+</html>

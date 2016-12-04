@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+
+<div clas="container">
+  <row class="row">
+      <div class="col-sm-4">
+  <ul>
+    <% @products.each do |product| %>
+    <strong><li>Description: </strong><%= product.description %></li>
+    <strong><li>Retailer: </strong><%= product.retailer.try(:name) %></li>
+    <strong><li>Image: </strong><%=  image_tag product.image, size: 200 %></li>
+    <strong><li>Price at purchase: </strong><%= product.price_at_purchase %></li>
+    <br>
+    <li><%= link_to 'Show', product %></li>
+    <li><%= link_to 'Edit', edit_product_path(product) %></li>
+    <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+      <% end %>
+
+      <li colspan="3"></li>
+    </ul>
+  </div>
+  </div>
+  </div>
+
+
+  <br>
+
+  <%= link_to 'New Product', new_product_path %>
