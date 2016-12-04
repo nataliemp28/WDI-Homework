@@ -11,7 +11,7 @@
 <body class="<%= controller.action_name %>">
   <header>
 
-    <nav class="navbar navbar-light bg-faded">
+    <nav class="navbar navbar-light bg-faded" "home-nav">
       <span class="navbar-text float-xs-right text-muted">
 
          <ul class="nav navbar-nav">
@@ -34,11 +34,7 @@
 
     </nav>
   </header>
-  <% flash.each do |name, message| %>
-  <div class="flash-message flash-message-<%= name %>">
-    <%= message %>
-  </div>
-  <% end %>
+
   <main class="container">
     <%= yield %>
   </main>
